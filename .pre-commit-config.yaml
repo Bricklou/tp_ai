@@ -21,3 +21,10 @@ repos:
     rev: v1.13.0
     hooks:
       - id: mypy
+        args:
+          - --strict
+          - --non-interactive
+          - --install-types
+          - --check-untyped-defs
+          - --ignore-missing-imports
+        exclude: ^tests/

@@ -16,7 +16,7 @@ class ImageProcessor:
 
         files = os.listdir(self.input_folder)
 
-        files = list(filter(lambda file: file.endswith(".jpg"), files))
+        files = list(filter(lambda f: f.endswith(".jpg"), files))
         print(files)
         print("Found %d files" % len(files))
 
