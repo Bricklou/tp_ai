@@ -9,9 +9,16 @@ packages = [{ include = "src" }]
 [tool.poetry.dependencies]
 python = "~3.11"
 pillow = "^11.0.0"
+pandas = "^2.2.3"
+scikit-learn = "^1.5.2"
+seaborn = "^0.13.2"
+matplotlib = "^3.9.2"
 
 [tool.poetry.dev-dependencies]
 types-pillow = "*"
+
+[tool.poetry.group.dev.dependencies]
+pandas-stubs = "^2.2.3.241009"
 
 [build-system]
 requires = ["poetry-core"]
@@ -25,3 +32,4 @@ main = "main:main"
 ignore_missing_imports = true
 strict = true
 check_untyped_defs = true
+mypy_path = ["$MYPY_CONFIG_FILE_DIR/stubs"]
